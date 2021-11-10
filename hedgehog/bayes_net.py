@@ -400,7 +400,7 @@ class BayesNet:
             if node in init:
                 p = p[p.index.get_level_values(node) == init[node]]
 
-            if conditioning := list(visited.intersection(self.markov_boundary(node))):
+            if conditioning = list(visited.intersection(self.markov_boundary(node))):
                 p = pointwise_mul([p, pointwise_mul(self.P[c] for c in conditioning)])
                 p = p.groupby([*conditioning, node]).sum()
                 p = p.groupby(conditioning).apply(lambda g: g / g.sum())
