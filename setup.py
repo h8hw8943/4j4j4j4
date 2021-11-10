@@ -17,7 +17,7 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/MaxHalford/hedgehog',
     packages=['hedgehog'],
-    python_requires='>=3.9',
+    python_requires='>=3.5',
     install_requires=[
         'pandas'
     ],
